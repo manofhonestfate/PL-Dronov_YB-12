@@ -1,0 +1,15 @@
+<html>
+<body>
+<script>
+day=new Array('пн','вт','ср','чт','пт','сб','вск');
+td=new Date();
+g=td.getFullYear();
+td1=new Date(g+1);
+g=td1.getFullYear();
+d=td.getDate(1);
+dp=td1.getDay();
+//--------------вывод
+alert(d+' янвая '+g+' года'+dnn[dp]);
+</script>
+</body>
+</html>

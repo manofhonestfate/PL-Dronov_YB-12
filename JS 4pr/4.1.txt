@@ -1,0 +1,15 @@
+<html>
+<body>
+<script>
+st=prompt('x=');
+x=parseFloat(st);
+st=prompt('y=');
+y=parseFloat(st);
+z1=4*x*y;
+z2=Math.sqrt(x-y)/Math.sqrt(Math.abs((y*y)-(x*x*x));
+z=z1-z2
+st='z='+z';
+alert(st);
+</script>
+</body>
+</html>

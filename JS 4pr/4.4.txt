@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+mas1=new Array(20);
+mas2=new Array(20);
+for(i<0;i<mas1.length;i++){
+y=Math.random(-10)*10+20;
+mas1[i]=Math.floor(y);
+}
+for(i<0;i<mas2.length;i++){
+if(i mod 2==0){
+	mas2[i]=mas1[i];}
+else{	
+	mas2[i]='*';}}
+alert(mas1+'/n'+mas2);
+</script>
+</body>
+</html>

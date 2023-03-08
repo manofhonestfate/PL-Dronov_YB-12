@@ -1,0 +1,13 @@
+<html>
+<body>
+<script>
+mas=new Array(10);s='';
+for(i<0;i<mas.length;i++){
+y=Math.random(-10)*10+20;
+mas[i]=Math.floor(y);
+s=s+' '+mas[i];
+}
+alert(s);
+</script>
+</body>
+</html>
