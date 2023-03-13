@@ -1,0 +1,19 @@
+<body>
+<script>
+mas=new Array(10); s='';
+for (i=0; i<mas.length; i++)
+{
+y=Math.random()*20-10;
+mas[i]=Math.floor(y);
+s=s+' '+mas[i];
+}
+alert(s);
+t=-1;
+for (i=0; i<=10; i++)
+{
+if(A[i]<0)t=i;
+}
+if (t>0) alert('Последний отрицательный элемент = '+mas[t]);
+else alert('Отрицательных элементов нет')
+</script>
+</body>
