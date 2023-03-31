@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+h1
+{color:black; font-size:36pt;} 
+</style>
+<script>
+i=0
+function f()
+{
+r1=document.getElementById('e1')
+r2=document.getElementById('e2')
+if(i==0)
+{
+r1.style.fontSize='54pt';
+r2.value='уменьшить';
+i=1;}
+else
+{
+r1.style.fontSize='36pt'; r2.value='увеличить';
+i=0
+}
+}
+</script>
+</head>
+<body>
+<h1 id='e1'> ЧВК Редан </h1>
+<form>
+<input type="button" id='e2' value="увеличить" onClick="f();">
+</form>
+</body>
+</html>
