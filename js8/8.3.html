@@ -1,0 +1,26 @@
+<head>
+<script>
+function srch() {
+var par=document.getElementsByTagName("p");
+var g=-Infinity;
+var min=0;
+for(var i = 0; i < par.length; i++) {
+	var x = par[i].textContent;
+	var n = parseInt(x);
+if(n > g){
+g = n;
+min=i;
+}}
+if(min >= 0) {
+	par[min].style.color = "red";
+}}
+</script>
+</head>
+<body>
+<p>5</p>
+<p>15</p>
+<p>10</p>
+<p>0</p>
+<p>1</p>
+<button onclick="srch()">Выделить максимальное число</button>
+</body>
