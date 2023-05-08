@@ -1,0 +1,47 @@
+<style>
+img {width:420; height:500}
+p{text-align:center}
+p{font-size: 20px;}
+#biba{position:absolute;left:300;top:120}
+</style>
+<head>
+<script>
+i=0
+function change()
+{
+album=new Array('a.jpg','b.jpg','c.png','d.jpg')
+if(i>=4) i=0;
+r=document.getElementById('pic')
+r.src=album[i];
+i++;
+}
+function doEvent1(type)
+{
+var r=document.getElementById('pic');
+if(type) r.style.transform = 'scale(1.2)';
+else r.style.transform = 'scale(1)';
+}
+function doEvent2(type)
+{
+var t=document.getElementById('pipa');
+if(type){ 
+t.style.fontSize='28px'; t.style.color='red';} 
+else{
+t.style.fontSize='20px'; t.style.color='black';}}
+function bday()
+{
+bd=document.getElementById('biba');
+n=57
+g=bd.innerHTML;
+bd.innerHTML=g+' ,до др осталось '+n+' дней.';
+bd.style.fontStyle='italic';
+}
+</script>
+</head>
+<body>
+<p><img src="d.jpg" id="pic" onMouseOver="doEvent1(true);" onMouseOut="doEvent1(false);"></p>
+<p><input type="button" value="next picture" onClick="change()"></p>
+<p id="pipa" onMouseOver="doEvent2(true);" onMouseOut="doEvent2(false);">Всем привет, меня зовут Геннадий Горин.</p>
+<p id="biba">Родился 07.07.2003</p>
+<p><input type="button" value="g" onClick="bday()"></p>
+</body> 
