@@ -1,0 +1,28 @@
+<html>
+<head>
+<body>
+<script>
+class Something{
+	constructor(name, image, price) {
+    		this.name = name;
+    		this.image = image;
+    		this.price = price;
+	}
+	getInfo() {
+    		console.log("Название: " + this.name);
+    		console.log("Цена: " + this.price);
+		console.log("Защита: " + this.protect)
+  	}
+}
+class Armour extends Something{
+	constructor(name, image, price, protect){
+		super(name, image, price);
+		this.protect = protect;
+	}
+}
+const s1 = new Armour("Плюшка Рей","plush.jpg", 1000000000,"joskaya zashita");
+s1.getInfo();
+</script>
+</body>
+</head>
+</html>
