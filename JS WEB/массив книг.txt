@@ -1,0 +1,67 @@
+<html>
+<body>
+
+<button onclick="addBook()">Добавить книгу</button>
+
+<p>Список книг:</p>
+<ul id="bookList"></ul>
+
+<script>
+  var library = [];
+
+  function addBook() {
+    var name = prompt("Введите название книги:");
+    var desc = prompt("Введите описание книги:");
+    var image = prompt("Введите ссылку на картинку:");
+
+    var book = {
+      name: name,
+      desc: desc,
+      image: image
+    };
+
+    library.push(book);
+
+    displayBooks();
+  }
+
+  function displayBooks() {
+    var bookListElement = document.getElementById("bookList");
+    bookListElement.innerHTML = "";
+
+    for (var i = 0; i < library.length; i++) {
+      var book = library[i];
+
+      var listItem = document.createElement("li");
+      listItem.innerHTML = "Книга " + i;
+
+      var deleteButton = document.createElement("button");
+      deleteButton.innerHTML = "Удалить";
+      deleteButton.onclick = function(index) {
+        return function() {
+          delBook(index);
+        };
+      }(i);
+
+      listItem.appendChild(deleteButton);
+
+      bookListElement.appendChild(listItem);
+    }
+  }
+
+  function printBookInfo(index) {
+    var book = library[index];
+    console.log("Информация о книге " + index);
+    console.log("Название: " + book.name);
+    console.log("Описание: " + book.desc);
+    console.log("Изображение: " + book.image);
+  }
+
+  function delBook(index) {
+    library.splice(index, 1);
+    displayBooks();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<body>
+    <style>
+	.r h1{
+	color: red;
+	position: absolute;
+	left: 41%;
+	bottom: 85%;
+	width: 100%;
+	}
+	.img{
+		margin:10px;
+		display: flex;
+		flex-direction: row;			
+	}
+	.two{
+		display: flex;
+		flex-direction: row;
+		}
+	.three{
+		display: flex;
+		flex-direction: row;
+		}
+	.four{
+		display: flex;
+		flex-direction: row;
+		}
+</style>    
+
+<div class = "one">
+	<div class = "r">
+    	<img width = "1515" height = "135" src = "D:\kartinki\wallpapers wat\2925779.jpg">
+	<h1 id="head">  place your text here</h1>
+</div>
+</div>
+<div class="two">
+	<div onclick = setColor("blue") class = "img">
+		<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+	</div>
+	<div onclick = setColor("orange") class = "img">
+		<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+	</div>
+	<div onclick = setColor("green") class = "img">
+		<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+	</div>
+</div>
+<div class="three">
+		<div onclick = setColor("yellow") class = "img">
+			<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+		</div>
+		<div onclick = setColor("pink") class = "img">
+			<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+		</div>
+		<div onclick = setColor("black") class = "img">
+			<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+		</div>
+</div>
+<div class="four">
+	<div onclick = setColor("white") class = "img">
+		<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+	</div>
+	<div onclick = setColor("brown") class = "img">
+		<img width = "485" height = "135" src= "D:\kartinki\wallpapers wat\fon.jpg">
+	</div>
+	<div onclick = setColor("blue") class = "img">
+		<img width = "485" height = "135" src ="D:\kartinki\wallpapers wat\fon.jpg">
+	</div>
+</div>
+<script>
+	const text = document.getElementById("head");
+	function setColor(color){
+		console.log(color);
+		text.style.color=color;
+	}
+</script>
+</body>
+</head>
+</html>
